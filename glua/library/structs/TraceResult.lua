@@ -1,0 +1,26 @@
+---@meta
+---@class TraceResult
+---@field Entity Entity The entity hit by the trace. 
+---@field Fraction number This indicates the how much of your trace length was used from 0-1 (resultLength/originalLength). 
+---@field FractionLeftSolid number Given the trace started in a solid enviroment, this will return at what distance the trace left the solid from 0-1. Doesn't work if the trace hit a non-worldspawn entity. 
+---@field Hit boolean Indicates whether the trace hit something. 
+---@field HitBox number The ID of the hitbox hit by the trace. 
+---@field HitGroup number [HITGROUP](/gmod/Enums/HITGROUP) describing what hitgroup the trace hit (not the same as HitBox). 
+---@field HitNoDraw boolean Indicates whenever the trace hit a no-draw brush. 
+---@field HitNonWorld boolean Indicates whenever the trace did not hit the world. 
+---@field HitNormal Vector The direction of the surface that was hit as a normal vector (vector with [length](/gmod/Vector:Length) of 1). 
+---@field HitPos Vector The position the trace stopped. This will be the provided endpos if the trace hit nothing. 
+---@field HitSky boolean Indicates whenever the trace hit the sky. 
+---@field HitTexture string The surface material (not texture) of whatever the trace hit. Will be `**displacement**` if the trace hit a displacement, and `**studio**` if it hit a prop. 
+---@field HitWorld boolean Indicates whenever the trace hit the world. 
+---@field MatType number [MAT](/gmod/Enums/MAT) of the material hit by the trace. 
+---@field Normal Vector The direction of the trace as a normal vector (vector with [length](/gmod/Vector:Length) of 1). 
+---@field PhysicsBone number The [PhysObj](/gmod/PhysObj) ID that was hit.  Used for [Entity:GetPhysicsObjectNum](/gmod/Entity:GetPhysicsObjectNum). 
+---@field StartPos Vector The origin of the trace. Will match the provided startpos. 
+---@field SurfaceProps number ID of hit surface property from `scripts/surfaceproperties.txt`. You can get the name using [util.GetSurfacePropName](/gmod/util.GetSurfacePropName).  Used for [CEffectData:SetSurfaceProp](/gmod/CEffectData:SetSurfaceProp). 
+---@field StartSolid boolean Indicates whenever the trace started in a solid enviroment. 
+---@field AllSolid boolean True if the entire trace is inside a solid. 
+---@field SurfaceFlags number The surface flags of the hit surface. See [SURF](/gmod/Enums/SURF). 
+---@field DispFlags number The displacement flags of the hit surface. See [DISPSURF](/gmod/Enums/DISPSURF). 
+---@field Contents number The contents of the hit surface. See [CONTENTS](/gmod/Enums/CONTENTS). 
+TraceResult = {}

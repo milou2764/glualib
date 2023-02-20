@@ -1,0 +1,12 @@
+---@meta
+---@class DateData
+---@field day number Day of the month 
+---@field hour number Hour 
+---@field isdst boolean Daylight saving enabled 
+---@field min number Minute 
+---@field month number Month January: 1, December: 12 
+---@field sec number Second 
+---@field wday number Day of the week Sunday: 1, Saturday: 7 
+---@field yday number Day of the year 
+---@field year number Year 
+DateData = {}

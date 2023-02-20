@@ -1,0 +1,13 @@
+---@meta
+---@class AmmoData
+---@field dmgtype number Damage type using [DMG](/gmod/Enums/DMG).  Related function is [game.GetAmmoDamageType](/gmod/game.GetAmmoDamageType). 
+---@field force number The force of the ammo.  Related function is [game.GetAmmoForce](/gmod/game.GetAmmoForce). 
+---@field maxsplash number The maximum water splash size. 
+---@field minsplash number The minimum water splash size. 
+---@field name string Name of the ammo.  Related functions are [game.GetAmmoName](/gmod/game.GetAmmoName) and [game.GetAmmoID](/gmod/game.GetAmmoID). 
+---@field npcdmg number The damage dealt to NPCs.  Related function is [game.GetAmmoNPCDamage](/gmod/game.GetAmmoNPCDamage). 
+---@field plydmg number The damage dealt to players.  Related function is [game.GetAmmoPlayerDamage](/gmod/game.GetAmmoPlayerDamage). 
+---@field tracer number Tracer type using [TRACER](/gmod/Enums/TRACER). 
+---@field maxcarry number Maximum amount of ammo of this type the player should be able to carry in reserve. `-2` makes this ammo type infinite.  Related function is [game.GetAmmoMax](/gmod/game.GetAmmoMax). 
+---@field flags number Flags for the ammo type using [AMMO](/gmod/Enums/AMMO). 
+AmmoData = {}

@@ -1,0 +1,18 @@
+---@meta
+---@class FontData
+---@field font string The font source. Custom font files are stored in resource/fonts/.  The length is limited to 31 characters maximum. 
+---@field extended boolean Allow the font to display glyphs that are outside of the Latin-1 range. Unicode code points above 0xFFFF are not supported. 
+---@field size number The font height in pixels  `Range:` 4 - 255 
+---@field weight number The font boldness 
+---@field blursize number The strength of the font blurring  `Range:` 0 - 80 
+---@field scanlines number The "scanline" interval Must be > 1 to work. This setting is per blursize per font - so if you create a font using "Arial" without scanlines, you cannot create an Arial font using scanlines with the same blursize 
+---@field antialias boolean Smooth the font 
+---@field underline boolean Add an underline to the font 
+---@field italic boolean Make the font italic 
+---@field strikeout boolean Add a strike through 
+---@field symbol boolean Enables the use of symbolic fonts such as Webdings 
+---@field rotary boolean Seems to add a line in the middle of each letter 
+---@field shadow boolean Add shadow casting to the font 
+---@field additive boolean Additive rendering 
+---@field outline boolean Add a black outline to the font.  This does not work well with antialias, and only allows black 1-pixel outlines. It may be preferable to not use this parameter, and instead use [draw.SimpleTextOutlined](/gmod/draw.SimpleTextOutlined) when drawing text that you want outlined. 
+FontData = {}

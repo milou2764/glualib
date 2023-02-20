@@ -1,0 +1,11 @@
+---@meta
+---@class MeshVertex
+---@field color table The vertex color. Uses the [Color](/gmod/Color). 
+---@field normal Vector The triangles normal required to calculate lighting(optional). 
+---@field tangent Vector The triangles tangent. Not used by the VertexLitGeneric shader. 
+---@field binormal Vector The triangles binormal. Not used by the VertexLitGeneric shader. 
+---@field pos Vector The vertex position. 
+---@field u number The u texture scale. 
+---@field v number The v texture scale. 
+---@field userdata table A table of four numbers. This is used by most shaders in Source to hold tangent information of the vertex ( tangentX, tangentY, tangentZ, tangentHandedness ). 
+MeshVertex = {}

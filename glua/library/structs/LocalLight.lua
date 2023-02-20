@@ -1,0 +1,16 @@
+---@meta
+---@class LocalLight
+---@field type number The type of the light source, see [MATERIAL_LIGHT](/gmod/Enums/MATERIAL_LIGHT). 
+---@field color Vector The color of the light source (x is red, y is green, z is blue). Values are not restricted to a specific range, higher values will result in a brighter light. 
+---@field pos Vector The origin of the light in world coordinates. 
+---@field dir Vector The direction of the light. Only required for directional and spot lights. 
+---@field range number The maximum range of the light source. Does not actually control light attenuation. Usually left at 0 for infinite range. 
+---@field angularFalloff number Angular falloff exponent for spot lights. Higher values result in a sharper transition between the inner cone and the outer cone. 
+---@field innerAngle number The inner cone angle for spot lights, in degrees. No angular falloff will occur inside that cone. 
+---@field outerAngle number The outer cone angle for spot lights, in degrees. 
+---@field fiftyPercentDistance number The distance at which the light will fade to 50% of its brightness. 
+---@field zeroPercentDistance number The distance at which the light will completely fade out. 
+---@field quadraticFalloff number The quadratic term of the light falloff. This will only be used if fiftyPercentDistance and zeroPercentDistance are not supplied, and allows finer control over light attenuation. 
+---@field linearFalloff number The linear term of the light falloff. This will only be used if fiftyPercentDistance and zeroPercentDistance are not supplied, and allows finer control over light attenuation. 
+---@field constantFalloff number The constant term of the light falloff. This will only be used if fiftyPercentDistance and zeroPercentDistance are not supplied, and allows finer control over light attenuation. 
+LocalLight = {}

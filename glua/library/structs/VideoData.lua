@@ -1,0 +1,13 @@
+---@meta
+---@class VideoData
+---@field container string The video container format.  Valid options are: `webm`, `ogg` 
+---@field video string The video codec.  Valid options are: `vp8`, `theora` 
+---@field audio string The audio codec.  Valid options are: `vorbis` 
+---@field quality number The video quality 
+---@field bitrate number The record bitrate 
+---@field fps number Frames per second 
+---@field lockfps boolean Lock the frame count per second 
+---@field name string The file name for the video 
+---@field width number The videos width 
+---@field height number The videos height 
+VideoData = {}

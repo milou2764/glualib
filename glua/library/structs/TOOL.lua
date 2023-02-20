@@ -1,0 +1,13 @@
+---@meta
+---@class TOOL
+---@field AddToMenu boolean If set to false, the tool won't be added to the tool menu and players will have to access it by other means. 
+---@field Category string The tool menu category under which the tool should be listed. 
+---@field Command string The console command to execute upon being selected in the Q menu. 
+---@field Name string The name of the tool in the Q menu. Common practice is to set this to "#tool.[lua filename].name" to match the name displayed in the tool information box. 
+---@field ClientConVar table A key-value ( convar name-default value ) table containing the client-side convars to create. All convars will be prefixed with the filename of the tool. You can later use [Tool:GetClientNumber](/gmod/Tool:GetClientNumber) or [Tool:GetClientInfo](/gmod/Tool:GetClientInfo) to retrieve these values. 
+---@field ServerConVar table Same as above, but created server-side instead. 
+---@field BuildCPanel function The function that is called to build the context menu for your tool. It has one argument, namely the context menu's base panel to which all of your custom panels are going to be parented to.  While it might sound like a hook, it isn't - you won't receive a self argument inside the function. 
+---@field Information table Allows you to override the tool usage information shown when the tool is equipped. See [Tool Information Display](/gmod/Tool%20Information%20Display) for more information. 
+---@field Mode string Class name of the tool. (name of the .lua file)  This is set automatically. 
+---@field Tab string The tool tab ([spawnmenu.AddToolTab](/gmod/spawnmenu.AddToolTab)) to add this tool to. (The internal name, first argument) 
+TOOL = {}

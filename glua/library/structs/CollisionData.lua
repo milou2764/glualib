@@ -1,0 +1,19 @@
+---@meta
+---@class CollisionData
+---@field HitPos Vector The collision position 
+---@field HitEntity Entity The other collision entity 
+---@field OurOldVelocity Vector The entity's velocity before the collision 
+---@field HitObject PhysObj Other entity's physics object 
+---@field DeltaTime number Time since the last collision with the `HitEntity` 
+---@field TheirOldVelocity Vector Speed of the other entity before the collision 
+---@field Speed number The speed of the entity before the collision 
+---@field HitNormal Vector Normal of the surface that hit the other entity 
+---@field PhysObject PhysObj Entity's physics object 
+---@field OurSurfaceProps number Surface Property ID of `this` entity 
+---@field TheirSurfaceProps number Surface Property ID of the entity we collided with 
+---@field HitSpeed number The scalar speed at which the impact happened 
+---@field OurNewVelocity Vector Our new velocity after the impact 
+---@field TheirNewVelocity Vector The new velocity after the impact of the entity we collided with 
+---@field OurOldAngularVelocity Vector Old angular velocity of this entity 
+---@field TheirOldAngularVelocity Vector Old angular velocity of the entity we collided with 
+CollisionData = {}

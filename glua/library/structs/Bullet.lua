@@ -1,0 +1,17 @@
+---@meta
+---@class Bullet
+---@field Attacker Entity The entity that should be reported as attacker eg. a player  By default this would be set to the entity [Entity:FireBullets](/gmod/Entity:FireBullets) is called on. 
+---@field Callback function Function to be called **after** the bullet was fired but **before** the damage is applied (the callback is called even if no damage is applied). The arguments are: * [Entity](/gmod/Entity) attacker * [table](/gmod/table) tr - See [TraceResult](/gmod/Structures/TraceResult) * [CTakeDamageInfo](/gmod/CTakeDamageInfo) dmgInfo 
+---@field Damage number The damage dealt by the bullet 
+---@field Force number The force of the bullets 
+---@field Distance number Maximum distance the bullet can travel 
+---@field HullSize number The hull size of the bullet 
+---@field Num number The amount of bullets to fire 
+---@field Tracer number Show tracer for every x bullets 
+---@field AmmoType string The ammunition name 
+---@field TracerName string The tracer name. You can find a list of default effects [here](/gmod/Effects). 
+---@field Dir Vector The fire direction 
+---@field Spread Vector The spread, only x and y are needed 
+---@field Src Vector The position to fire the bullets from 
+---@field IgnoreEntity Entity The entity that the bullet will ignore when it will be shot. 
+Bullet = {}

@@ -1,0 +1,11 @@
+---@meta
+---@class PhysEnvPerformanceSettings
+---@field LookAheadTimeObjectsVsObject number Maximum amount of seconds to precalculate collisions with objects. 
+---@field LookAheadTimeObjectsVsWorld number Maximum amount of seconds to precalculate collisions with world. 
+---@field MaxAngularVelocity number Maximum rotation velocity. 
+---@field MaxCollisionChecksPerTimestep number Maximum collision checks per tick. 
+---@field MaxCollisionsPerObjectPerTimestep number Maximum collision per object per tick. 
+---@field MaxFrictionMass number Maximum mass of an object to be affected by friction. 
+---@field MaxVelocity number Maximum speed of an object. 
+---@field MinFrictionMass number Minimum mass of an object to be affected by friction. 
+PhysEnvPerformanceSettings = {}

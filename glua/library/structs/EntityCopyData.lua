@@ -1,0 +1,21 @@
+---@meta
+---@class EntityCopyData
+---@field Name string The entity's name, see [Entity:GetName](/gmod/Entity:GetName). 
+---@field Class string The entity's class name, see [Entity:GetClass](/gmod/Entity:GetClass). 
+---@field Pos Vector The entity's position, relative to the duplication origin point. 
+---@field Angle Angle The entity's angle, relative to the duplication angle. 
+---@field DT table The entity's Network Vars, see [ENTITY:SetupDataTables](/gmod/ENTITY:SetupDataTables) and [Networking Entities](/gmod/Networking%20Entities). 
+---@field Model string The entity's model, see [Entity:GetModel](/gmod/Entity:GetModel). 
+---@field ModelScale number The entity's model scale, see [Entity:GetModelScale](/gmod/Entity:GetModelScale). This will only be present if the model scale isn't 1. 
+---@field Skin number The entity's active skin, see [Entity:GetSkin](/gmod/Entity:GetSkin). 
+---@field ColGroup number The entity's collision group, see [Entity:GetCollisionGroup](/gmod/Entity:GetCollisionGroup). Uses the [COLLISION_GROUP](/gmod/Enums/COLLISION_GROUP). 
+---@field Mins Vector The entity's collision bound minimums, see [Entity:GetCollisionBounds](/gmod/Entity:GetCollisionBounds). 
+---@field Maxs Vector The entity's collision bound maximums, see [Entity:GetCollisionBounds](/gmod/Entity:GetCollisionBounds). 
+---@field PhysicsObjects table Data about the entity's [PhysObj](/gmod/PhysObj)s, see [Entity:GetPhysicsObjectNum](/gmod/Entity:GetPhysicsObjectNum). The key is the physics object index (starts from 0), and the value is a [PhysicsObjectSave](/gmod/Structures/PhysicsObjectSave). Unlike other tables in this structure, if there are no physics objects for this entity this will be an empty table. 
+---@field FlexScale number The entity's Flex Scale, see [Entity:GetFlexScale](/gmod/Entity:GetFlexScale). 
+---@field Flex table Each flex bone's flex weight, see [Entity:GetFlexWeight](/gmod/Entity:GetFlexWeight). The key is the flex's index and the value is the weight. Only flexes with a non-default (nonzero) weight are listed, and if none exist, this field will be nil. 
+---@field BodyG table The entity's body groups, see [Entity:GetBodygroup](/gmod/Entity:GetBodygroup). The key is the bodygroup ID and the value is the assigned bodygroup number. Only body groups with a non-default (> 0) value are listed, and if none exist, this field will be nil. 
+---@field BoneManip table Bone manipulation data, see [Entity:HasBoneManipulations](/gmod/Entity:HasBoneManipulations). The key is the bone index and the value is a [BoneManipulationData](/gmod/Structures/BoneManipulationData). Only bones that have been manipulated with non-default values are listed, and if none exist, this field will be nil. 
+---@field MapCreationID number The entity's MapCreationID, only exists for entities that were created by the map. See [Entity:MapCreationID](/gmod/Entity:MapCreationID). 
+---@field WorkshopID number Deprecated, always 0. See [Entity:GetWorkshopID](/gmod/Entity:GetWorkshopID). 
+EntityCopyData = {}

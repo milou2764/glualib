@@ -1,0 +1,20 @@
+---@meta
+---@class SequenceInfo
+---@field label string Name of the sequence. 
+---@field activityname string Name of the activity this sequence is attached to. 
+---@field activity number The activity ID associated with this sequence. See [ACT](/gmod/Enums/ACT). 
+---@field actweight number How likely this sequence is to be picked when playing an activity its attached to. -1 means this is the only sequence for that activity. (needs validation) 
+---@field flags number The looping and other flags of this sequence. 
+---@field numevents number Number of animation events this sequence has. 
+---@field bbmin number Mins part of the bounding box for this sequence 
+---@field bbmax number Maxs part of the bounding box for this sequence 
+---@field fadeintime number ideal cross fade in time (0.2 default) 
+---@field fadeouttime number ideal cross fade out time (0.2 default) 
+---@field localentrynode number transition node at entry 
+---@field localexitnode number transition node at exit 
+---@field nodeflags number Transition rules 
+---@field lastframe number Frame that should generate EndOFSequence 
+---@field nextseq number If non 0, the next sequence for auto advancing sequences 
+---@field cycleposeindex number If non 0, index of pose parameter to be used as cycle index. This means that the sequence playback will be controlled by a pose parameter. 
+---@field anims table A 1-based array of all animationIDs associated with this sequence. For use with [Entity:GetAnimInfo](/gmod/Entity:GetAnimInfo). 
+SequenceInfo = {}

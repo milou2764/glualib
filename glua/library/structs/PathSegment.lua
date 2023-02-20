@@ -1,0 +1,12 @@
+---@meta
+---@class PathSegment
+---@field area CNavArea The navmesh area this segment occupies. 
+---@field curvature number How much of a curve should the bot execute when navigating this segment. 0 = none, 1 = 180° 
+---@field distanceFromStart number Distance of this segment from the start of the path. 
+---@field forward Vector The direction of travel to reach the end of this segment from the start, represented as a normalised vector. 
+---@field how number The direction of travel to reach the end of this segment from the start, represented as a cardinal direction integer 0 to 3, or 9 for vertical movement. 
+---@field ladder CNavLadder The navmesh ladder this segment occupies, if any. 
+---@field length number Length of this segment. 
+---@field pos Vector The position of the end of this segment. 
+---@field type number The movement type of this segment, indicating how bots are expected to move along this segment. * 0 is ground movement * 1 is falling down * 2 is climbing up or jumping * 3 is jumping over a gap * 4 is climbing a ladder up (unused) * 5 is climbing a ladder down (unused) 
+PathSegment = {}

@@ -1,0 +1,11 @@
+---@meta
+---@class HTTPRequest
+---@field failed function Function to be called on failure. Arguments are * [string](/gmod/string) reason 
+---@field success function Function to be called on success. Arguments are * [number](/gmod/number) code * [string](/gmod/string) body * [table](/gmod/table) headers 
+---@field method string Request method, case insensitive. Possible values are: * GET * POST * HEAD * PUT * DELETE * PATCH * OPTIONS 
+---@field url string The target url 
+---@field parameters table KeyValue table for parameters. This is only applicable to the following request methods: * GET * POST * HEAD 
+---@field headers table KeyValue table for headers 
+---@field body string Body string for POST data. If set, will override parameters 
+---@field type string Content type for body. 
+HTTPRequest = {}

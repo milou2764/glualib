@@ -1,0 +1,47 @@
+---@meta
+---@class SWEP
+---@field ClassName string Entity class name of the SWEP (file or folder name of your SWEP). This is set automatically 
+---@field Category string (Clientside) Category the SWEP is in 
+---@field Spawnable boolean Whether this SWEP should be displayed in the Spawnemnu menu 
+---@field AdminOnly boolean Whether or not only admins can spawn the SWEP from their Spawnmenu menu 
+---@field PrintName string Nice name of the SWEP 
+---@field Base string The base weapon to derive from. This **must** be a Lua weapon 
+---@field m_WeaponDeploySpeed number Multiplier of deploy speed 
+---@field Owner Entity The entity that owns/wields this SWEP, if any. This is an __index override and not an actual key, so [rawget](/gmod/Global.rawget)`( self:GetTable(), "Owner" )` will return `nil`. 
+---@field Weapon Weapon This is equivalent to `self` in SWEP functions. This only exists for legacy code. 
+---@field Author string (Clientside) The author of the SWEP to be shown in weapon selection 
+---@field Contact string (Clientside) The contacts of the SWEP creator to be shown in weapon selection 
+---@field Purpose string (Clientside) The purpose of the SWEP creator to be shown in weapon selection 
+---@field Instructions string (Clientside) How to use your weapon, to be shown in weapon selection 
+---@field ViewModel string Path to the view model for your SWEP (what the wielder will see) 
+---@field ViewModelFlip boolean (Clientside) Should we flip the view model? This is needed for some CS:S view models 
+---@field ViewModelFlip1 boolean (Clientside) Same as ViewModelFlip, but for the second viewmodel 
+---@field ViewModelFlip2 boolean (Clientside) Same as ViewModelFlip, but for the third viewmodel 
+---@field ViewModelFOV number (Clientside) The angle of FOV used for the view model (Half-Life value is `90`; Half-Life 2 is `54`; Counter-Strike: Source is `74`; Day of Defeat: Source is `45`) 
+---@field WorldModel string The world model for your SWEP (what you will see in other players hands) 
+---@field AutoSwitchFrom boolean (Serverside) Whether this weapon can be autoswitched away from when the player runs out of ammo in this weapon or picks up another weapon or ammo 
+---@field AutoSwitchTo boolean (Serverside) Whether this weapon can be autoswitched to when the player runs out of ammo in their current weapon or they pick this weapon up 
+---@field Weight number (Serverside) Determines the priority of the weapon when autoswitching. The weapon being autoswitched from will attempt to switch to a weapon with the same weight that has ammo, but if none exists, it will prioritise higher weight weapons. 
+---@field BobScale number (Clientside) The scale of the viewmodel bob (viewmodel movement from left to right when walking around) 
+---@field SwayScale number (Clientside) The scale of the viewmodel sway (viewmodel position lerp when looking around). 
+---@field BounceWeaponIcon boolean (Clientside) Should the weapon icon bounce in weapon selection? 
+---@field DrawWeaponInfoBox boolean (Clientside) Should draw the weapon selection info box, containing SWEP.Instructions, etc. 
+---@field DrawAmmo boolean (Clientside) Should we draw the default HL2 ammo counter? 
+---@field DrawCrosshair boolean (Clientside) Should we draw the default crosshair? 
+---@field RenderGroup number (Clientside) The SWEP render group, see [RENDERGROUP](/gmod/Enums/RENDERGROUP) 
+---@field Slot number Slot in the weapon selection menu, starts with `0` 
+---@field SlotPos number Position in the slot, should be in the range `0-128` 
+---@field SpeechBubbleLid number (Clientside) Internal variable for drawing the info box in weapon selection 
+---@field WepSelectIcon number (Clientside) Path to an texture. Override this in your SWEP to set the icon in the weapon selection. This must be the texture ID, see [surface.GetTextureID](/gmod/surface.GetTextureID). Alternatively you can render custom weapon selection via [WEAPON:DrawWeaponSelection](/gmod/WEAPON:DrawWeaponSelection). 
+---@field CSMuzzleFlashes boolean (Clientside) Should we use Counter-Strike muzzle flashes upon firing? This is required for DoD:S or CS:S view models to fix their muzzle flashes. 
+---@field CSMuzzleX boolean (Clientside) Use the X shape muzzle flash instead of the default Counter-Strike muzzle flash. Requires CSMuzzleFlashes to be set to true 
+---@field Primary table Primary attack settings. The table contains these fields: * [string](/gmod/string) Ammo - Ammo type ("Pistol", "SMG1" etc) * [number](/gmod/number) ClipSize - The maximum amount of bullets one clip can hold. Setting it to `-1` means weapon uses no clips, like a grenade or a rocket launch. * [number](/gmod/number) DefaultClip - Default ammo in the clip, making it higher than ClipSize will give player additional ammo on spawn * [boolean](/gmod/boolean) Automatic - If true makes the weapon shoot automatically as long as the player has primary attack button held down 
+---@field Secondary table Secondary attack settings, has same fields as Primary attack settings 
+---@field UseHands boolean (Clientside) Makes the player models hands bonemerged onto the view model 
+---@field Folder string The folder from where the weapon was loaded. This should always be "weapons/weapon_myweapon", regardless whether your SWEP is stored as a file, or multiple files in a folder. It is set automatically on load 
+---@field AccurateCrosshair boolean (Clientside) Makes the default SWEP crosshair be positioned in 3D space where your aim actually is (like on Jeep), instead of simply sitting in the middle of the screen at all times 
+---@field DisableDuplicator boolean Disable the ability for players to duplicate this SWEP 
+---@field ScriptedEntityType string (Clientside) Sets the spawnmenu content icon type for the entity, used by spawnmenu in the Sandbox-derived gamemodes. See [spawnmenu.AddContentType](/gmod/spawnmenu.AddContentType) for more information. 
+---@field m_bPlayPickupSound boolean If set to false, the weapon will not play the weapon pick up sound when picked up. 
+---@field IconOverride string (Clientside)If set, overrides the icon path to be displayed in the Spawnmenu for this entity. 
+SWEP = {}

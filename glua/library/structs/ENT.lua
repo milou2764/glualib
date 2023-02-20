@@ -1,0 +1,23 @@
+---@meta
+---@class ENT
+---@field Base string The base entity to derive from. This **must** be a valid Lua entity 
+---@field Type string Type of the entity. This **must be one of these:** * **anim** * **brush** * **point** * **ai** * **nextbot** * **filter**  See [Scripted Entities](/gmod/Scripted%20Entities) for a more detailed explanation of what each one is. 
+---@field ClassName string Entity class name of the entity (File or folder name of your entity). **This is set automatically `after` the entity file is loaded.** 
+---@field Folder string The folder from where the entity was loaded. This should always be "entity/ent_myentity", regardless whether your entity is stored as a file, or multiple files in a folder. **This is set automatically `before` the entity file is loaded.** 
+---@field AutomaticFrameAdvance boolean (Clientside) Set this to true if your entity has animations. You should also apply changes to the [ENTITY:Think](/gmod/ENTITY:Think) function from the example on that page. 
+---@field Category string (Clientside) Spawnmenu category to put the entity into 
+---@field Spawnable boolean Whether this entity should be displayed and is spawnable in the spawn menu 
+---@field Editable boolean Whether the entity supports Editing. See [Editable Entities](/gmod/Editable%20Entities) for more info. 
+---@field AdminOnly boolean Whether or not only admins can spawn the entity from their spawn menu 
+---@field PrintName string (Clientside) Nice name of the entity to appear in the spawn menu 
+---@field Author string (Clientside) The author of the entity 
+---@field Contact string (Clientside) The contacts of the entity creator 
+---@field Purpose string (Clientside) The purpose of the entity creation 
+---@field Instructions string (Clientside) How to use your entity 
+---@field RenderGroup number (Clientside) The entity's render group, see [RENDERGROUP](/gmod/Enums/RENDERGROUP). 
+---@field DisableDuplicator boolean (Serverside) Disable the ability for players to duplicate this entity. 
+---@field ScriptedEntityType string (Clientside) Sets the spawnmenu content icon type for the entity, used by spawnmenu in the Sandbox-derived gamemodes. See [spawnmenu.AddContentType](/gmod/spawnmenu.AddContentType) for more information. 
+---@field DoNotDuplicate boolean (Serverside) If set, the entity will not be duplicated via the built-in duplicator system. 
+---@field IconOverride string (Clientside) If set, overrides the icon path to be displayed in the Spawnmenu for this entity. 
+ENT = {}
+---@class ENT:Entity

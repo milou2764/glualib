@@ -1,0 +1,29 @@
+---@meta
+---@class SurfacePropertyData
+---@field name string The name of the surface property, identical to [util.GetSurfacePropName](/gmod/util.GetSurfacePropName). 
+---@field hardnessFactor number How hard a surface is. If this is greater than or equal to another surfaces's hardThreshold, a hard impact sound will be used. 
+---@field hardThreshold number Hardness threshold for impact sounds. HitSurface.hardnessFactor >= InflictorSurface.hardThreshold - hard impact sound (depends on hardVelocityThreshold's value), HitSurface.hardnessFactor < InflictorSurface.hardThreshold - soft impact sound (always). 
+---@field hardVelocityThreshold number Velocity threshold for impact sounds. impactSpeed >= HitSurface.hardVelocityThreshold - hard impact sound (depends on hardThreshold's value), impactSpeed < HitSurface.hardVelocityThreshold - soft impact sound (always). 
+---@field reflectivity number Amount of sound reflected from the surface represented as a number 0.0 - 1.0. 0 - no reflection, 1 - fully reflected. 
+---@field roughnessFactor number How rough a surface is. If this is greater than or equal to another surfaces's roughThreshold, a rough scrape sound will be used. 
+---@field roughThreshold number Roughness threshold for friction sounds. HitSurface.roughnessFactor >= InflictorSurface.roughThreshold - rough friction sound, HitSurface.roughnessFactor < InflictorSurface.roughThreshold - soft friction sound. 
+---@field climbable number Indicates whether or not the surface is a ladder. Used to detect whether a player is on a ladder. 0 - false, > 0 - true. 
+---@field jumpFactor number Scalar multiplier for player jump height - or more accurately, applied z-axis velocity on a surface. For example, 1 - normal jump, 2 - twice as high, and 0.5 - half as high. 
+---@field material number The surface material. See [MAT](/gmod/Enums/MAT). 
+---@field maxSpeedFactor number Scalar multiplier for player speed. Achieves this by multiplying [CMoveData:SetMaxSpeed](/gmod/CMoveData:SetMaxSpeed) in [GM:Move](/gmod/GM:Move). 
+---@field dampening number This is the physical drag on an object when in contact with this surface (0 - x, 0 none to x a lot). 
+---@field density number Material density in kg / m^3 (water is 1000). If a surface's density is < 1000, it will float in water. This is used to calculate the total mass of an object. 
+---@field elasticity number Collision elasticity - used to compute coefficient of restitution represented as a number 0.0 - 1.0. 0.01 is soft, 1.0 is hard. 
+---@field friction number Physical friction used to slow entities touching the surface represented as a number 0.0 - 1.0. 0.01 is slick, 1.0 is completely rough. 
+---@field thickness number Material thickness. If this is 0, the material is not volumetrically solid, and thus the object mass will be calculated as "volume * 0.0254^3 * density" where 0.0254 is meters per inch. If non-zero, the mass will be "surfacearea * thickness * 0.0254^3 * density". 
+---@field breakSound string Sound to play when a prop or func_breakable is broken. 
+---@field bulletImpactSound string Bullet impact sound with this surface. 
+---@field impactHardSound string Physical impact sound when hitting surfaces hard. 
+---@field impactSoftSound string Physical impact sound when hitting surfaces softly. 
+---@field rollingSound string Unused sound. 
+---@field scrapeRoughSound string Friction sound when roughly scraping against an entity. 
+---@field scrapeSmoothSound string Friction sound when smoothly scraping against an entity. 
+---@field stepLeftSound string Footstep sound for left foot. 
+---@field stepRightSound string Footstep sound for right foot. 
+---@field strainSound string Unused sound. 
+SurfacePropertyData = {}

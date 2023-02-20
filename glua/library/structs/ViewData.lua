@@ -1,0 +1,27 @@
+---@meta
+---@class ViewData
+---@field origin Vector The view's original position 
+---@field angles Angle The view's angles 
+---@field aspectratio number Default width divided by height 
+---@field x number The x position of the viewport to render in 
+---@field y number The y position of the viewport to render in 
+---@field w number The width of the viewport to render in 
+---@field h number The height of the viewport to render in 
+---@field drawhud boolean Draw the HUD and call the hud painting related hooks 
+---@field drawmonitors boolean Draw monitors 
+---@field drawviewmodel boolean The weapon's viewmodel 
+---@field viewmodelfov number The viewmodel's FOV 
+---@field fov number The main view's FOV 
+---@field ortho boolean or table Render the view orthogonal. Can also be a table with these keys: (In which case orthogonal view is automatically set to true) * left * right * top * bottom 
+---@field ortholeft number Coordinate for the left clipping plane 
+---@field orthoright number Coordinate for the right clipping plane 
+---@field orthotop number Coordinate for the top clipping plane 
+---@field orthobottom number Coordinate for the bottom clipping plane 
+---@field znear number The distance of the view's origin to the near clipping plane 
+---@field zfar number The distance of the view's origin to the far clipping plane 
+---@field znearviewmodel number The distance of the view's origin to the near clipping plane for the viewmodel 
+---@field zfarviewmodel number The distance of the view's origin to the far clipping plane for the viewmodel 
+---@field dopostprocess boolean Currently works identically to the "bloomtone" option (it also overrides it if you set this to false). 
+---@field bloomtone boolean Disables default engine bloom and pauses the "brightness changes" on HDR maps. 
+---@field offcenter table This allows you to "zoom in" on a part of the screen - for example, the top-left quarter of the screen. This is similar to how [poster splits the screen](https://garry.tv/2012/02/25/poster-screenshots/) into separate renders.  It's a table with 4 keys, controlling what portion of the screen to draw: * left - where the left edge starts. Natural value is 0. * right - where the right edge ends. Natural value is equal to w (the width of the viewport). * top - where the `bottom` edge starts. Natural value is 0. * bottom - where the `top` edge ends. Natural value is equal to h (the height of the viewport).  Note that top and bottom are reversed.  Values outside the viewport are allowed, but not recommended - instead you should increase the view FOV. 
+ViewData = {}
