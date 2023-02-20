@@ -1,2 +1,1 @@
 jsontolib.py convert the gmod wiki to a library you can use with this vscode extension: https://github.com/LuaLS/lua-language-server
-You may rename the Entity class to ENT after the program executes because idk why the name it Entity in the first place.
