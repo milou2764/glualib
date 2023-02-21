@@ -11,9 +11,24 @@ with open('wiki.json') as f:
     data = json.load(f)
 
 def checkType(type_):
-    if type_ == "vararg":
+    if type_ == "vararg" or type_ == "file_class" or type_ == "sensor" or type_ == "Order":
         type_ = "any"
+    elif type_ == "bool":
+        type_ = "boolean"
+    elif type_ == "pixelvis handle t":
+        type_ = "number"
     return type_
+
+luaKeywords = ["and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"]
+def argCheck(arg):
+    wrong = re.findall(r'[^a-zA-Z0-9_.]', arg)
+    for w in wrong:
+        arg = arg.replace(w, "")
+    if arg == "argn...":
+        arg = "..."
+    elif arg in luaKeywords:
+        arg = arg + "_"
+    return arg
 
 def parseFunction(content, v):
     if "DESCRIPTION" in v:
@@ -24,10 +39,7 @@ def parseFunction(content, v):
     if "ARGUMENTS" in v:
         for arg in v["ARGUMENTS"]:
             if "NAME" in arg and "TYPE" in arg:
-                name = arg["NAME"]
-                wrong = re.findall(r'[^a-zA-Z0-9_.]', name)
-                for w in wrong:
-                    name = name.replace(w, "")
+                name = argCheck(arg["NAME"])
                 args += name + ", "
                 optional = ""
                 description = ""
@@ -100,8 +112,7 @@ for lib, value in data['LIBRARIES'].items():
 subprocess.run("rm -f "+path+"enums.lua", shell=True)
 subprocess.run("touch "+path+"enums.lua", shell=True)
 # Manual fixes
-open(path + 'enums.lua', 'at').write('TEXFILTER = {}\n')
-open(path + 'enums.lua', 'at').write('SENSORBONE = {}\n')
+open(path + 'enums.lua', 'at').write('TEXFILTER = {}\nSENSORBONE = {}\nSCREENFADE = {}\n')
 f = open(path + 'enums.lua', 'at')
 content = "---@meta\n"
 for enum, v in data['ENUMS'].items():
@@ -124,11 +135,13 @@ f.close()
 subprocess.run("mkdir " + path + "structs", shell=True)
 for struct, value in data['STRUCTS'].items():
     content = "---@meta\n"
+    struct = struct.split(" ")[0]
     content += "---@class " + struct + "\n"
     fields = ""
     for field, v in value['MEMBERS'].items():
         if "DESCRIPTION" in v:
-            content += "---@field " + v["NAME"] + " " + v["TYPE"]
+            name = v["NAME"].split(" ")[0]
+            content += "---@field " + name + " " + v["TYPE"]
             description = " "
             descList = v["DESCRIPTION"].splitlines()
             for line in descList:

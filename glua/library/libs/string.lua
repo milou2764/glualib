@@ -21,9 +21,9 @@ function string.Comma( InputNumber ) end
 function string.dump( func, stripDebugInfo ) end
 --- Returns whether or not the second passed string matches the end of the first.
 ---@param str string The string whose end is to be checked. 
----@param end string The string to be matched with the end of the first. 
+---@param end_ string The string to be matched with the end of the first. 
 ---@return boolean
-function string.EndsWith( str, end ) end
+function string.EndsWith( str, end_ ) end
 --- Splits a string up wherever it finds the given separator.
 --- 
 --- This is the reverse of [string.Implode](/gmod/string.Implode).

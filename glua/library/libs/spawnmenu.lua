@@ -2,7 +2,7 @@
 spawnmenu = {}
 --- Activates a tool, opens context menu and brings up the tool gun.
 ---@param tool string Tool class/file name 
----@param menu_only bool Should we activate this tool in the menu only or also the toolgun? True = menu only, False = toolgun aswell 
+---@param menu_only boolean Should we activate this tool in the menu only or also the toolgun? True = menu only, False = toolgun aswell 
 function spawnmenu.ActivateTool( tool, menu_only ) end
 --- Activates tools context menu in specified tool tab.
 ---@param tab number The tabID of the tab to open the context menu in 
@@ -18,11 +18,11 @@ function spawnmenu.ActiveControlPanel(  ) end
 function spawnmenu.AddContentType( name, constructor ) end
 --- Inserts a new tab into the CreationMenus table, which will be used by the creation menu to generate its tabs (Spawnlists, Weapons, Entities, etc.)
 ---@param name string What text will appear on the tab (I.E Spawnlists). 
----@param function function The function called to generate the content of the tab. 
+---@param function_ function The function called to generate the content of the tab. 
 ---@param material? string Path to the material that will be used as an icon on the tab. 
 ---@param order? number The order in which this tab should be shown relative to the other tabs on the creation menu. 
 ---@param tooltip? string The tooltip to be shown for this tab. 
-function spawnmenu.AddCreationTab( name, function, material, order, tooltip ) end
+function spawnmenu.AddCreationTab( name, function_, material, order, tooltip ) end
 --- Used to add addon spawnlists to the spawnmenu tree. This function should be called within [SANDBOX:PopulatePropMenu](/gmod/SANDBOX:PopulatePropMenu).
 --- 
 --- Addon spawnlists will not save to disk if edited.

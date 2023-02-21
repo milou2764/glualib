@@ -16,11 +16,11 @@ function ents.CreateClientProp( model ) end
 function ents.CreateClientside( class ) end
 --- Returns a table of all entities along the ray. The ray does not stop on collisions, meaning it will go through walls/entities.
 ---@param start Vector The start position of the ray 
----@param end Vector The end position of the ray 
+---@param end_ Vector The end position of the ray 
 ---@param mins? Vector The mins corner of the ray 
 ---@param maxs? Vector The maxs corner of the ray 
 ---@return table
-function ents.FindAlongRay( start, end, mins, maxs ) end
+function ents.FindAlongRay( start, end_, mins, maxs ) end
 --- Gets all entities with the given class, supports wildcards. This works internally by iterating over [ents.GetAll](/gmod/ents.GetAll). Even if internally ents.GetAll is used, It is faster to use ents.FindByClass than ents.GetAll with a single class comparison.
 ---@param class string The class of the entities to find. 
 ---@return table

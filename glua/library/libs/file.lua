@@ -39,7 +39,7 @@ function file.IsDir( fileName, gamePath ) end
 ---@param fileName string The files name. See [file.Write](/gmod/file.Write) for details on filename restrictions when writing to files. 
 ---@param fileMode string The mode to open the file in. Possible values are:  * **r** - read mode  * **w** - write mode  * **a** - append mode  * **rb** - binary read mode  * **wb** - binary write mode  * **ab** - binary append mode 
 ---@param gamePath string The path to look for the files and directories in. See [this list](/gmod/File_Search_Paths) for a list of valid paths. 
----@return file_class
+---@return any
 function file.Open( fileName, fileMode, gamePath ) end
 --- Returns the content of a file.
 --- 

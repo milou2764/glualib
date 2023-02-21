@@ -231,10 +231,10 @@ function math.tan( value ) end
 function math.tanh( number ) end
 --- Returns the fraction of where the current time is relative to the start and end times
 ---@param start number Start time in seconds 
----@param end number End time in seconds 
+---@param end_ number End time in seconds 
 ---@param current number Current time in seconds 
 ---@return number
-function math.TimeFraction( start, end, current ) end
+function math.TimeFraction( start, end_, current ) end
 --- Rounds towards zero.
 ---@param num number The number to truncate 
 ---@param digits? number The amount of digits to keep after the point. 

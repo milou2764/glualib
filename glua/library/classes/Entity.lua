@@ -96,8 +96,8 @@ function Entity:BoundingRadius(  ) end
 --- Causes a specified function to be run if the entity is removed by any means. This can later be undone by [Entity:RemoveCallOnRemove](/gmod/Entity:RemoveCallOnRemove) if you need it to not run.
 ---@param identifier string Identifier of the function within CallOnRemove 
 ---@param removeFunc function Function to be called on remove 
----@param argn...? any Optional arguments to pass to removeFunc. Do note that the first argument passed to the function will always be the entity being removed, and the arguments passed on here start after that. 
-function Entity:CallOnRemove( identifier, removeFunc, argn... ) end
+---@param ...? any Optional arguments to pass to removeFunc. Do note that the first argument passed to the function will always be the entity being removed, and the arguments passed on here start after that. 
+function Entity:CallOnRemove( identifier, removeFunc, ... ) end
 --- Resets all pose parameters such as aim_yaw, aim_pitch and rotation.
 function Entity:ClearPoseParameters(  ) end
 --- Declares that the collision rules of the entity have changed, and subsequent calls for [GM:ShouldCollide](/gmod/GM:ShouldCollide) with this entity may return a different value than they did previously.

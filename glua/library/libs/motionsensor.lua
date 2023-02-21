@@ -5,7 +5,7 @@ motionsensor = {}
 ---@param rotation Angle
 ---@return Vector
 ---@return Angle
----@return sensor
+---@return any
 function motionsensor.BuildSkeleton( translator, player, rotation ) end
 ---@param ent Entity Entity to choose builder for 
 ---@return string

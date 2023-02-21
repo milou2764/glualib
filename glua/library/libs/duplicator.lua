@@ -122,9 +122,9 @@ function duplicator.RegisterBoneModifier( key, boneModifier ) end
 function duplicator.RegisterConstraint( name, callback, ... ) end
 --- This allows you to specify a specific function to be run when your SENT is pasted with the duplicator, instead of relying on the generic automatic functions.
 ---@param name string The ClassName of the entity you wish to register a factory for 
----@param function function The factory function you want to have called. It should have the arguments (Player, ...) where ... is whatever arguments you request to be passed. It also should return the entity created, otherwise [duplicator.Paste](/gmod/duplicator.Paste) result will not include it! 
+---@param function_ function The factory function you want to have called. It should have the arguments (Player, ...) where ... is whatever arguments you request to be passed. It also should return the entity created, otherwise [duplicator.Paste](/gmod/duplicator.Paste) result will not include it! 
 ---@param args any Strings of the names of arguments you want passed to function the from the [EntityCopyData](/gmod/Structures/EntityCopyData). As a special case, "Data" will pass the whole structure. 
-function duplicator.RegisterEntityClass( name, function, args ) end
+function duplicator.RegisterEntityClass( name, function_, args ) end
 --- This allows you to register tweaks to entities. For instance, if you were making an "unbreakable" addon, you would use this to enable saving the "unbreakable" state of entities between duplications.
 --- 
 --- This function registers a piece of generic code that is run on all entities with this modifier. In order to have it actually run, use [duplicator.StoreEntityModifier](/gmod/duplicator.StoreEntityModifier).

@@ -55,9 +55,9 @@ function util.DateStamp(  ) end
 --- Performs a trace and paints a decal to the surface hit.
 ---@param name string The name of the decal to paint. 
 ---@param start Vector The start of the trace. 
----@param end Vector The end of the trace. 
+---@param end_ Vector The end of the trace. 
 ---@param filter? Entity If set, the decal will not be able to be placed on given entity. Can also be a table of entities. 
-function util.Decal( name, start, end, filter ) end
+function util.Decal( name, start, end_, filter ) end
 --- Performs a trace and paints a decal to the surface hit.
 ---@param material IMaterial The name of the decal to paint. Can be retrieved with [util.DecalMaterial](/gmod/util.DecalMaterial). 
 ---@param ent Entity The entity to apply the decal to 
@@ -113,7 +113,7 @@ function util.GetModelMeshes( model, lod, bodygroupMask ) end
 ---@return string
 function util.GetPData( steamID, name, default ) end
 --- Creates a new PixVis handle. See [util.PixelVisible](/gmod/util.PixelVisible).
----@return pixelvis handle t
+---@return number
 function util.GetPixelVisibleHandle(  ) end
 --- Utility function to quickly generate a trace table that starts at the players view position, and ends `32768` units along a specified direction.
 ---@param ply Player The player the trace should be based on 
@@ -261,7 +261,7 @@ function util.ParticleTracerEx( name, startPos, endPos, doWhiz, entityIndex, att
 --- Returns the visibility of a sphere in the world.
 ---@param position Vector The center of the visibility test. 
 ---@param radius number The radius of the sphere to check for visibility. 
----@param PixVis pixelvis handle t The PixVis handle created with [util.GetPixelVisibleHandle](/gmod/util.GetPixelVisibleHandle). 
+---@param PixVis number The PixVis handle created with [util.GetPixelVisibleHandle](/gmod/util.GetPixelVisibleHandle). 
 ---@return number
 function util.PixelVisible( position, radius, PixVis ) end
 --- Returns the contents of the position specified.
