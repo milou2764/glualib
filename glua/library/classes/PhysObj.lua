@@ -1,5 +1,5 @@
 ---@meta
----@class PhysObj
+---@class PhysObj:Entity
 PhysObj = {}
 --- Adds the specified velocity to the current.
 ---@param angularVelocity Vector Additional velocity. 

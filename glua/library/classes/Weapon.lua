@@ -1,5 +1,5 @@
 ---@meta
----@class Weapon
+---@class Weapon:Entity
 Weapon = {}
 --- Returns whether the weapon allows to being switched from when a better ( [Weapon:GetWeight](/gmod/Weapon:GetWeight) ) weapon is being picked up.
 ---@return boolean

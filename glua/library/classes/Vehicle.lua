@@ -1,5 +1,5 @@
 ---@meta
----@class Vehicle
+---@class Vehicle:Entity
 Vehicle = {}
 --- Returns the remaining boosting time left.
 ---@return number

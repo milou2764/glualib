@@ -1,5 +1,5 @@
 ---@meta
----@class NPC
+---@class NPC:Entity
 NPC = {}
 --- Makes the NPC like, hate, feel neutral towards, or fear the entity in question. If you want to setup relationship towards a certain entity `class`, use [NPC:AddRelationship](/gmod/NPC:AddRelationship).
 ---@param target Entity The entity for the relationship to be applied to. 

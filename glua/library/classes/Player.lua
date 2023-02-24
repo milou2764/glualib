@@ -1,5 +1,5 @@
 ---@meta
----@class Player
+---@class Player:Entity
 Player = {}
 --- Returns the player's AccountID aka SteamID3. (`[U:1:AccountID]`)
 --- 

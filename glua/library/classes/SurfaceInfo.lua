@@ -1,5 +1,5 @@
 ---@meta
----@class SurfaceInfo
+---@class SurfaceInfo:Entity
 SurfaceInfo = {}
 --- Returns the brush surface's material.
 ---@return IMaterial

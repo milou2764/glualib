@@ -81,10 +81,18 @@ f.close()
 #################
 # CLASSES      #
 #################
+parentClasses = {"Entity"}
 subprocess.run("mkdir " + path + "classes", shell=True)
 for class_, value in data['CLASSES'].items():
+    parent = ""
+    if "DESCRIPTION" in value:
+        desc = value["DESCRIPTION"]
+        # loop through all parent classes
+        for p in parentClasses:
+            if p in desc:
+                parent = ":" + p
     content = "---@meta\n"
-    content += "---@class " + class_ + "\n"
+    content += "---@class " + class_ + parent + "\n"
     content += class_ + " = {}\n"
     for fun, v in value['MEMBERS'].items():
         content,args = parseFunction(content, v)

@@ -1,5 +1,5 @@
 ---@meta
----@class CTakeDamageInfo
+---@class CTakeDamageInfo:Entity
 CTakeDamageInfo = {}
 --- Increases the damage by damageIncrease.
 ---@param damageIncrease number The damage to add. 

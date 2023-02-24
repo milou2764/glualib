@@ -1,5 +1,5 @@
 ---@meta
----@class CNewParticleEffect
+---@class CNewParticleEffect:Entity
 CNewParticleEffect = {}
 --- Adds a control point to the particle system.
 ---@param cpID number The control point ID, 0 to 63. 
